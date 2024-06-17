@@ -1,7 +1,7 @@
-<footer class="nav-color bg-primary mt-1">
+<footer class="nav-color color-bg mt-1">
     <br /><br />
     <div class="container">
-      <div class="row">
+      <div class="row text-white">
         <div class="col-sm">
           <h4><span>HYUNDAI</span> ADISUCIPTO YOGYAKARTA</h4>
           <br />
@@ -28,18 +28,20 @@
         </div>
         <div class="col-sm">
           <form>
-            <br /><br /><br />
-            <div class="form-group">
-              <img src="img/icon 1.png" alt="" />
-              <img src="img/icon 2.png" alt="" />
-              <img src="img/icon 3.png" alt="" />
-              <img src="img/icon 4.png" alt="" />
+            <div class="form-group mt-auto">
+              <h4>let's Connect WIth Our's</h4>
+              <div class="img-icon mt-4">
+              <img src="/asset/img/icon-fb.png" alt="" />
+              <img src="/asset/img/icon-wa.png" alt="" />
+              <img src="/asset/img/icon-ig.png" alt="" />
+              <img src="/asset/img/icon-yt.png" alt="" />
+              </div>
             </div>
           </form>
         </div>
       </div>
-      <div class="footer text-white">
-        copyright & copy 2024 | Hyundai Adisucipto Yogyakarta
+      <div class="text-white">
+        copyright &copy 2024 | Hyundai Adisucipto Yogyakarta
       </div>
     </div>
   </footer>

@@ -4,7 +4,7 @@
 
 <body>
 <div class="container">
-    <h2 class="mt-3 mb-3">Temukan Kenyamanan Anda Bersama Kami</h2>
+    <h2 class="border-bottom mb-4 mt-4 pb-2 pt-2">Temukan Kenyamanan Anda Bersama Kami</h2>
     <p>karena Kenyamanan Adalah <span>Kunci</span></p>
     <br>
 </div>
@@ -27,7 +27,7 @@
                         <p class="card-text"><?php echo $row['harga_mobil']; ?></p>
                         <p class="card-text"><?php echo $row['bahan_bakar']; ?></p> 
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer mt-2 mb-2 pt-4 mb-4">
                         <a href="pemesanan.php?id_nama=<?php echo $row['id_nama']; ?>"><button class="btn btn-primary">Pemesanan</button></a>
                     </div>
                 </div>

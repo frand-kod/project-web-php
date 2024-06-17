@@ -2,7 +2,7 @@
 <?php include "asset/navbar.php"; ?>
 <?php include "controller/conn.php"; ?>
 
-<?php 
+<?php
 if (isset($_GET['id_nama'])) {
     $id = $_GET['id_nama'];
     $query = "SELECT * FROM katalog WHERE id_nama = '$id'";
@@ -18,50 +18,51 @@ if (isset($_GET['id_nama'])) {
     exit;
 }
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Halaman Pembelian</title>
-</head>
 <body>
-
-<!-- content here -->
-<div class="container">
-    <h1 class="mt-4 mb-4">Halaman Pembelian</h1>
-<div class="container d-flex">
-    <!-- items are alredy pick up -->
-    <div class="col-4">
-
-        <div class="card">
-            <img src="data:image/jpeg;base64,<?php echo base64_encode($row['gambar_mobil']); ?>" class="card-img-top" alt="Gambar Mobil" style="width: 180; height: auto;">
-            <div class="card-body">
-                <h5 class="card-title text-center"><?php echo ($row['nama_mobil']); ?></h5>
-                <p class="card-text"><?php echo ($row['keterangan']); ?></p>
-                <p class="card-text"><?php echo ($row['jenis_mobil']); ?></p>
-                <p class="card-text"><?php echo ($row['harga_mobil']); ?></p>
-                <p class="card-text"><?php echo ($row['bahan_bakar']); ?></p> 
+    <!-- content here -->
+    <div class="container">
+        <h1 class="border-bottom mb-4 mt-4 pb-2 pt-2">Halaman Pembelian</h1>
+        <p>Silahkan di isi dengan sebenar benarna. Kesalahan Inputan merupakan tanggung jawab pembeli.</p>
+        <div class="container d-flex ">
+            <!-- items are alredy pick up -->
+            <div class="col-3">
+                <div class="card mt-4">
+                    <img src="data:image/jpeg;base64,<?php echo base64_encode($row['gambar_mobil']); ?>" class="card-img-center" alt="Gambar Mobil" style="width: 180; height: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><?php echo ($row['nama_mobil']); ?></h5>
+                        <p class="card-text"><?php echo ($row['keterangan']); ?></p>
+                        <p class="card-text"><?php echo ($row['jenis_mobil']); ?></p>
+                        <p class="card-text"><?php echo ($row['harga_mobil']); ?></p>
+                        <p class="card-text"><?php echo ($row['bahan_bakar']); ?></p>
+                    </div>
+                </div>
             </div>
-            <div class="card-footer text-center">
-                <a href="transaksi.php?id_nama=<?php echo htmlspecialchars($row['id_nama']); ?>"><button class="btn btn-primary">Pemesanan</button></a>
+            <!-- form section aside items -->
+            <div class="col-9 p-4">
+
+                <form action="aksipemesanan.php" method="post">
+                    <div class="">
+                        <h3 class="mb-4">Detail Pesanan</h3>
+                        <p>isikan data anda pada form di bawah ini</p>
+
+                        <table>
+                            <tr>
+                                <td><label for="buyer-name">Nama Pembeli</label></td>
+                                <td><input type="text" name="buyer-name" id="buyer"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="adreess"></label></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </form>
+
             </div>
         </div>
-    </div>
-    <!-- form section aside items -->
-        <div class="col">
-        
-            <form action="">
-            form pemesanan
-            </form>
-        
-        </div>
-    </div>
-</div>
-
-<?php include "asset/footer.php"; ?>
-
+    </div>    
 </body>
+<?php include "asset/footer.php"; ?>
 </html>

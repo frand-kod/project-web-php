@@ -11,8 +11,6 @@ $db = "db_showroom";
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 
-if($conn){
-    echo "connecting succesfully";
-}else{
-    echo " gagal";
+if(!$conn){
+    echo "connecting failed";
 }

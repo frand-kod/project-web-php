@@ -1,3 +1,18 @@
+
 .color-bg{
  background-color: rgba(18, 20, 129, 1);
+}
+
+.bottom-border{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid gray;
+}
+
+.text-white{
+    color:#FFFFE0 !important;
+}
+.font-brand-color{
+    color: chocolate;
 }
